@@ -21,23 +21,24 @@ public class ecommerce {
 		for (int i = 0; i < x.size(); i++) {
 
 			String y = x.get(i).getText();
-//			System.out.println(y);
-			
+
 			for (int j = 0; j < names.length; j++) {
 				if ( y.contains(names[j])) {
-					driver.findElements(By.xpath("//button[text()='ADD TO CART']")).get(i).click();
+					driver.findElements(By.xpath("//div[@class='product-action']")).get(i).click();
 //					System.out.println(y);
 					System.out.println();
 					System.out.println(names[j]);
 					System.out.println(i);
-					Thread.sleep(5000);
+					System.out.println(y);
+							
+
 				}	
 			}
 			
 			
 		}
-		Thread.sleep(1000);
-		driver.quit();
+//		Thread.sleep(1000);
+//		driver.quit();
 	}
 
 }
