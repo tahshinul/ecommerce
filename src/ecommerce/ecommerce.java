@@ -68,6 +68,10 @@ public class ecommerce {
 		driver.findElement(By.className("promoInfo")).getText();
 		Assert.assertEquals(driver.findElement(By.className("promoInfo")).getText(), "Code applied ..!");
 		driver.findElement(By.xpath("//button[text()='Place Order']")).click();
+		
+		driver.findElement(By.xpath("//div[@class='wrapperTwo']//div//select")).click();
+		driver.findElement(By.xpath("//div[@class='wrapperTwo']//div//select //option[@value='Algeria']")).click();
+		driver.findElement(By.xpath("//div[@class='wrapperTwo']//div//select")).click();
 	}
 
 }
